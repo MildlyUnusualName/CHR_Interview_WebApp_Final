@@ -1,0 +1,41 @@
+﻿@model CHR_Interview_WebApp_Final.Models.StateCodes
+
+@{
+    ViewData["Title"] = "Route Calculator";
+}
+
+<h1>Route Calculator</h1>
+
+<h4>Please enter a 3 letter state code below. Your options are:</h4>
+<p>
+    CAN <br />
+    USA <br />
+    MEX <br />
+    BLZ <br />
+    GTM <br />
+    SLV <br />
+    HND <br />
+    NIC <br />
+    CRI <br />
+    PAN <br />
+</p>
+<hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="ProcessCode" asp-controller="Model">
+                <div class="form-group">
+                    <label asp-for="InputCode" class="control-label"></label>
+                    <input name="stateCode" class="form-control" maxlength="3"/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+<div>
+    <a asp-action="Index"> </a>
+</div>
+
+

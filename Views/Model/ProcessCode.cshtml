@@ -1,0 +1,41 @@
+﻿@model CHR_Interview_WebApp_Final.Models.StateCodes
+
+@{
+    ViewData["Title"] = "ProcessCode";
+}
+
+<h1>Results</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>State Codes</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Results.Count != 0)
+        {
+            @foreach (var item in Model.Results)
+            {
+                <tr>
+                    <td>
+                        @item
+                    </td>
+                </tr>
+            }
+        }
+
+        else
+        {
+        <tr>
+            <td>
+                That was not a valid entry.
+            </td>
+        </tr>
+        }
+
+
+    </tbody>
+</table>
+<p>Select "Home" to conduct another search.</p>
